@@ -20,7 +20,7 @@ define( function ( require ) {
                 this.uiComponent = uiComponent;
 
                 // 工具栏元素定义列表
-                this.elementList = elementList;
+                this.elementList = elementList(kfEditor);
 
                 this.elements = [];
 
