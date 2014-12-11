@@ -56,19 +56,19 @@ define( function ( require ) {
                     group: [ {
                         title: "预设公式",
                         items: [ {
-                            title: "预设公式",
+                            title: _l('preset.title'),
                             content: [ {
-                                label: "二次公式",
+                                label: _l('preset.quadraticformula'),
                                 item: {
                                     val: "x=\\frac {-b\\pm\\sqrt {b^2-4ac}}{2a}"
                                 }
                             }, {
-                                label: "二项式定理",
+                                label: _l('preset.binomialtheorem'),
                                 item: {
                                     val: "{\\left(x+a\\right)}^2=\\sum^n_{k=0}{\\left(^n_k\\right)x^ka^{n-k}}"
                                 }
                             }, {
-                                label: "勾股定理",
+                                label: _l('preset.pythagoreantheorem'),
                                 item: {
                                     val: "a^2+b^2=c^2"
                                 }
@@ -87,22 +87,22 @@ define( function ( require ) {
                     width: 527,
                     type: BOX_TYPE.OVERLAP,
                     group: [ {
-                        title: "基础数学",
+                        title: _l('basicmathematics.title'),
                         items: []
                     }, {
-                        title: "希腊字母",
+                        title: _l('greekletter.title'),
                         items: []
                     }, {
-                        title: "求反关系运算符",
+                        title: _l('negatedrelationaloperators.title'),
                         items: []
                     }, {
-                        title: "字母类符号",
+                        title: _l('letterlikesymbols.title'),
                         items: []
                     }, {
-                        title: "箭头",
+                        title: _l('arrow.title'),
                         items: []
                     }, {
-                        title: "手写体",
+                        title: _l('handwritten.title'),
                         items: []
                     } ]
                 }
@@ -125,7 +125,7 @@ define( function ( require ) {
                     group: [ {
                         title: "分数",
                         items: [ {
-                            title: "分数",
+                            title: _l('fraction.fraction'),
                             content: [ {
                                 item: {
                                     val: "\\frac \\placeholder\\placeholder"
@@ -136,7 +136,7 @@ define( function ( require ) {
                                 }
                             } ]
                         }, {
-                            title: "常用分数",
+                            title: _l('fraction.commonfraction'),
                             content: [ {
                                 item: {
                                     val: "\\frac {dy}{dx}"
@@ -174,7 +174,7 @@ define( function ( require ) {
                     group: [ {
                         title: "上标和下标",
                         items: [ {
-                            title: "上标和下标",
+                            title: _l('subsupscript.subsupscript'),
                             content: [ {
                                 item: {
                                     val: "\\placeholder^\\placeholder"
@@ -193,7 +193,7 @@ define( function ( require ) {
                                 }
                             } ]
                         }, {
-                            title: "常用的上标和下标",
+                            title: _l('subsupscript.commonsubsupscript'),
                             content: [ {
                                 item: {
                                     val: "e^{-i\\omega t}"
@@ -227,7 +227,7 @@ define( function ( require ) {
                     group: [ {
                         title: "根式",
                         items: [ {
-                            title: "根式",
+                            title: _l('roots.roots'),
                             content: [ {
                                 item: {
                                     val: "\\sqrt \\placeholder"
@@ -246,7 +246,7 @@ define( function ( require ) {
                                 }
                             } ]
                         }, {
-                            title: "常用根式",
+                            title: _l('roots.commonroots'),
                             content: [ {
                                 item: {
                                     val: "\\frac {-b\\pm\\sqrt{b^2-4ac}}{2a}"
@@ -276,7 +276,7 @@ define( function ( require ) {
                     group: [ {
                         title: "积分",
                         items: [ {
-                            title: "积分",
+                            title: _l('integral.integral'),
                             content: [ {
                                 item: {
                                     val: "\\int \\placeholder"
@@ -322,7 +322,7 @@ define( function ( require ) {
                     group: [ {
                         title: "求和",
                         items: [ {
-                            title: "求和",
+                            title: _l('largeoperator.sum'),
                             content: [ {
                                 item: {
                                     val: "\\sum\\placeholder"
@@ -356,7 +356,7 @@ define( function ( require ) {
                     group: [ {
                         title: "方括号",
                         items: [ {
-                            title: "方括号",
+                            title: _l('bracket.bracket'),
                             content: [ {
                                 item: {
                                     val: "\\left(\\placeholder\\right)"
@@ -394,7 +394,7 @@ define( function ( require ) {
                     group: [ {
                         title: "函数",
                         items: [ {
-                            title: "三角函数",
+                            title: _l('function.trigonometric'),
                             content: [ {
                                 item: {
                                     val: "\\sin\\placeholder"
@@ -421,7 +421,7 @@ define( function ( require ) {
                                 }
                             } ]
                         }, {
-                            title: "常用函数",
+                            title: _l('function.commonfunction'),
                             content: [ {
                                 item: {
                                     val: "\\sin\\theta"
@@ -504,7 +504,7 @@ define( function ( require ) {
                 configList = config[ 2 ].options.box.group[ 0 ].items;
 
             configList.push( {
-                title: "基础数学",
+                title: _l('basicmathematics.basicmathematics'),
                 content: getIconContents( list, "assets/images/toolbar/char.png" )
             } );
 
@@ -514,13 +514,13 @@ define( function ( require ) {
         ( function () {
 
             var greekList = [ {
-                    title: "小写",
+                    title: _l('greekletter.lowercase'),
                     values: [ "alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta", "iota", "kappa", "lambda", "mu", "nu", "xi", "omicron", "pi", "rho", "sigma", "tau", "upsilon", "phi", "chi", "psi", "omega" ]
                 }, {
-                    title: "大写",
+                    title: _l('greekletter.uppercase'),
                     values: [ "Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omicron", "Pi", "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega" ]
                 }, {
-                    title: "变体",
+                    title: _l('greekletter.variants'),
                     values: [ "digamma", "varepsilon", "varkappa", "varphi", "varpi", "varrho", "varsigma", "vartheta" ]
                 } ],
                 greekConfigList = config[ 2 ].options.box.group[ 1 ].items;
@@ -549,7 +549,7 @@ define( function ( require ) {
         ( function () {
 
             var greekList = [ {
-                    title: "求反关系运算符",
+                    title: _l('negatedrelationaloperators.negatedrelationaloperators'),
                     values: [
                         "neq", "nless", "ngtr", "nleq", "ngeq", "nsim", "lneqq",
                         "gneqq", "nprec", "nsucc", "notin", "nsubseteq", "nsupseteq",
@@ -579,7 +579,7 @@ define( function ( require ) {
                 configList = config[ 2 ].options.box.group[ 3 ].items;
 
             configList.push( {
-                title: "字母类符号",
+                title: _l('letterlikesymbols.letterlikesymbols'),
                 content: getIconContents( list, "assets/images/toolbar/char.png" )
             } );
 
@@ -607,7 +607,7 @@ define( function ( require ) {
                 configList = config[ 2 ].options.box.group[ 4 ].items;
 
             configList.push( {
-                title: "箭头",
+                title: _l('arrow.arrow'),
                 content: getIconContents( list, "assets/images/toolbar/char.png" )
             } );
 
@@ -617,13 +617,13 @@ define( function ( require ) {
         ( function () {
 
             var list = [ {
-                    title: "手写体",
+                    title: _l('handwritten.handwritten'),
                     values: [
                         "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                         "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
                         "Y", "Z" ]
                 }, {
-                    title: "花体",
+                    title: _l('handwritten.curlicue'),
                     values: [
                         "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                         "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
@@ -632,14 +632,14 @@ define( function ( require ) {
                         "w", "x", "y", "z"
                     ]
                 }, {
-                    title: "双线",
+                    title: _l('handwritten.doble'),
                     values: [
                         "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                         "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
                         "Y", "Z"
                     ]
                 }, {
-                    title: "罗马",
+                    title: _l('handwritten.roman'),
                     values: [
                         "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                         "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
