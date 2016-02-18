@@ -113,7 +113,7 @@ define( function ( require ) {
             type: UI_ELE_TYPE.DRAPDOWN_BOX,
             options: {
                 button: {
-                    label: _l('labelMap.fraction') +"<br/>",
+                    label: _l('labelMap.fraction'),
                     icon: {
                         src: "assets/images/toolbar/btn.png",
                         x: 45,
