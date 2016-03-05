@@ -113,7 +113,7 @@ define( function ( require ) {
             processRootGroup( parser, tree );
         // 根占位符处理, 附加label
         } else if ( parentTree.attr[ "data-root" ] && tree.name === "placeholder" && onlyPlaceholder( parentTree.operand ) ) {
-            tree.attr.label = ROOT_P_TEXT;
+            tree.attr.label = parser.kfEditor.getLang('rootText') || ROOT_P_TEXT;
         }
 
         for ( var i = 0, len= tree.operand.length; i < len; i++ ) {

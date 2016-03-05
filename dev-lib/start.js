@@ -17,5 +17,6 @@ define( 'kf.start', function ( require ) {
     KFEditor.registerComponents( "print", require( "print/printer" ) );
 
     kf.EditorFactory = Factory;
+    kf.I18N = {};
 
 } );

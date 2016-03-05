@@ -243,7 +243,7 @@ define( function ( require ) {
                         fixOffset: this.options.fixOffset
                     } ),
                     overlapListObject = createOverlapList( this.doc, {
-                        width: 150,
+                        width: 220,
                         items: classifyList
                     } ),
                     wrapNode = $$.ele( this.doc, "div", {

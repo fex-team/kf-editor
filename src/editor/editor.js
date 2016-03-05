@@ -6,6 +6,7 @@ define( function ( require ) {
 
     var kity = require( "kity" ),
         Utils = require( "base/utils" ),
+        kf = require( "kf" ),
         defaultOpt = {
             formula: {
                 fontsize: 50,
@@ -15,7 +16,8 @@ define( function ( require ) {
                 zoom: true,
                 maxzoom: 2,
                 minzoom: 1
-            }
+            },
+            lang: 'zh-cn'
 
         };
 
@@ -29,7 +31,6 @@ define( function ( require ) {
         constructor: function ( container, opt ) {
 
             this.options = Utils.extend( true, {}, defaultOpt, opt );
-
             this.FormulaClass = null;
             // 就绪状态
             this._readyState = false;
@@ -59,7 +60,21 @@ define( function ( require ) {
             }
 
         },
-
+        getLang: function (path) {
+            var opt = this.getOptions();
+            var lang = kf.I18N[opt.lang];
+            if (!lang) {
+                throw Error("not import language file");
+            }
+            path = (path || "").split(".");
+            for (var i = 0, ci; ci = path[i++];) {
+                lang = lang[ci];
+                if (!lang){
+                    break;
+                }
+            }
+            return lang;
+        },
         ready: function ( cb ) {
 
             if ( this._readyState ) {
