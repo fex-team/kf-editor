@@ -302,10 +302,21 @@ define( function ( require, exports, module ) {
         },
 
         processingInput: function () {
+            var inputLatex = this.inputBox.value
+            var isNeedRedraw = null
 
-            this.restruct( this.inputBox.value );
+            if(this.inputBox.value === '') {
+                inputLatex = '\\placeholder'
+                isNeedRedraw = this.kfEditor.requestService( "syntax.delete.group" );
+            }
+
+            this.restruct( inputLatex );
             this.kfEditor.requestService( "ui.update.canvas.view" );
 
+            if ( isNeedRedraw ) {
+                this.updateInput();
+                this.processingInput();
+            }    
         },
 
         // 根据给定的字符串重新进行构造公式
