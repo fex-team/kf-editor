@@ -2,7 +2,7 @@ kf.I18N["zh-cn"] = {
     'rootText': "在此处键入公式",
     "labelMap":{
     	"preset": "预设<br/>",
-    	"fraction": "分数",
+    	"fraction": "分数<br/>",
     	"roots":"根式<br/>",
     	"integral": "积分<br/>",
     	"largeoperator":"大型<br/>运算符",

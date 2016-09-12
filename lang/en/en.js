@@ -2,7 +2,7 @@ kf.I18N["en"] = {
     'rootText': "Enter formula",
     "labelMap":{
     	"preset": "Preset<br/>",
-    	"fraction": "Fraction",
+    	"fraction": "Fraction<br/>",
     	"roots":"Roots<br/>",
     	"integral": "Integral<br/>",
     	"largeoperator":"Large<br/>Operator",
