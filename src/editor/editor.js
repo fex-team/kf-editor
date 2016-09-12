@@ -7,6 +7,7 @@ define( function ( require ) {
     var kity = require( "kity" ),
         Utils = require( "base/utils" ),
         kf = require( "kf" ),
+        $ = require('jquery'),
         defaultOpt = {
             formula: {
                 fontsize: 50,
@@ -20,6 +21,13 @@ define( function ( require ) {
             lang: 'zh-cn'
 
         };
+
+        function checkCurLang(I18N){
+            for(var lang in I18N){
+                return lang
+            }
+        }
+
 
     // 同步组件列表
     var COMPONENTS = {},
@@ -100,11 +108,8 @@ define( function ( require ) {
         getOptions: function () {
             return this.options;
         },
-
-        initResource: function () {
-
+        _initResource: function(){
             var _self = this;
-
             ResourceManager.ready( function ( Formula ) {
 
                 _self.FormulaClass = Formula;
@@ -114,6 +119,24 @@ define( function ( require ) {
 
             }, this.options.resource );
 
+        },
+        initResource: function () {
+            var _self = this;
+
+            if(!$.isEmptyObject(kf.I18N)){
+                //修改默认的语言类型
+                _self.options.lang = checkCurLang(kf.I18N);
+                this._initResource();
+            }else{
+                var path = _self.options.langPath + _self.options.lang + "/" + _self.options.lang + ".js?refresh-20150923";
+                $.getScript(path)
+                .done(function( script, textStatus ) {
+                    _self._initResource();
+                })
+                .fail(function( jqxhr, settings, exception ) {
+                    _self._initResource();
+                });
+            }
         },
 
         /**
